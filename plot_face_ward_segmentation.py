@@ -42,7 +42,7 @@ connectivity = grid_to_graph(*face.shape)
 # Compute clustering
 print("Compute structured hierarchical clustering...")
 st = time.time()
-n_clusters = 16  # number of regions
+n_clusters = 160  # number of regions
 ward = AgglomerativeClustering(n_clusters=n_clusters, linkage='ward',
                                connectivity=connectivity)
 ward.fit(X)
@@ -62,3 +62,4 @@ for l in range(n_clusters):
 plt.xticks(())
 plt.yticks(())
 plt.show()
+
